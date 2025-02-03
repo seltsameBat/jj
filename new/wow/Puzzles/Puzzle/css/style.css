@@ -1,0 +1,15 @@
+﻿body {
+    font-family: 'Chwey', Calibri, Arial;
+    margin:0;
+    background-color:#4e254c;
+}
+h2{
+	color:rgb(248, 211, 236);
+    font-weight:normal;
+    text-align:center;
+}
+h3{
+    font-weight:normal;
+    margin:3px 0px;
+    text-align:center;
+}

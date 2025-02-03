@@ -1,0 +1,113 @@
+/* General link styles */
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 8em;
+	line-height: 1;
+	color: #272727;
+	display: inline-block;
+}
+
+
+/* Manko */
+.link--manko {
+	color: #0c4769;
+	font-family: 'oswald', serif;
+	font-weight: 900;
+	font-style: italic;
+	padding: 0.65em 0 0.8em;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.link--manko:hover {
+	color: #227094;
+}
+
+.link--manko::before,
+.link--manko::after {
+	content: '';
+	position: absolute;
+	border-width: 4px 0;
+	border-style: solid;
+	border-color: #807E7D;
+	pointer-events: none;
+	-webkit-transform: scale3d(0,1,1);
+	transform: scale3d(0,1,1);
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+}
+
+.link--manko::before {
+	width: 50%;
+	left: 25%;
+	height: 80%;
+	top: 10%;
+}
+
+.link--manko::after {
+	width: 30%;
+	left: 35%;
+	height: 100%;
+	top: 0;
+}
+
+.link--manko:hover::before,
+.link--manko:hover::after {
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+.link--manko span {
+	color: #18719b;
+	font-weight: 400;
+	position: absolute;
+	font-size: 0.2em;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.link--manko span:first-of-type {
+	bottom: 100%;
+	margin-bottom: 15px;
+	-webkit-transform: scale3d(0.8,0.8,1) translate3d(0,10px,0);
+	transform: scale3d(0.8,0.8,1) translate3d(0,10px,0);
+}
+
+.link--manko span:last-of-type {
+	top: 100%;
+	margin-top: 10px;
+	-webkit-transform: scale3d(0.8,0.8,1) translate3d(0,-10px,0);
+	transform: scale3d(0.8,0.8,1) translate3d(0,-10px,0);
+}
+
+.link--manko:hover span {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.link--manko:hover span:first-of-type {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.link--manko:hover span:last-of-type {
+	-webkit-transition-delay: 0.20s;
+	transition-delay: 0.20s;
+}
+/* ========= MOBILE OVERRIDES ========= */
+@media (max-width: 767px) {
+	.link--manko { font-size:4em!important; padding:0.4em 0!important }
+	.link--manko span { font-size:0.25em!important; display:none }
+	.link--manko::before, .link--manko::after { border-width:2px 0 }
+  }
+  
+  .link--manko:active { color:#227094!important }
