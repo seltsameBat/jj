@@ -99,31 +99,28 @@ svg {
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #00406d 0%, #1e9aec 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 90%;
+    max-width: 500px;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    margin: 0 0 3em;
+    padding: 16px;
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    height: calc(100vw / 5);
+    width: calc(100vw / 5);
+    max-height: 100px;
+    max-width: 100px;
     background: #083961;
-    font-size: 0;
-    color: #fdce4b;
-    border-radius: 8px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    cursor: pointer;
+    position: relative;
 }
 
 .deck .card.open {
@@ -188,7 +185,6 @@ svg {
 .final-score.modal {
     position: absolute;
     /* top: 47%; */
-    width: 340px;
     min-height: 300px;
     color: #d5dee2;
     background: linear-gradient(160deg, #7494b3 0%, #1b8edc 100%);
@@ -197,6 +193,9 @@ svg {
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: none;
     z-index: 2;
+    width: 80%;
+    max-width: 400px;
+
 }
 
 .final-score.modal h1 {
